@@ -1,0 +1,12 @@
+.teacher-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto;
+  }
+  
+  .dashboard-content {
+    flex-grow: 1; /* Ensures it takes up the rest of the space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    background-color: #e6f1f8;
+  }

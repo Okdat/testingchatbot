@@ -1,0 +1,217 @@
+.quiz-page{
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  margin-top: -100px;
+}
+
+.quiz-page::-webkit-scrollbar {
+  display: none;
+}
+.quiz-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 100px 0;
+  width: 100%;
+  height: auto;
+}
+
+.quiz-card {
+  width: calc((100% - 4 * 20px) / 5);
+  height: 200px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-card:active {
+  transform: scale(0.95);
+}
+
+.quiz-number {
+  font-size: 90px;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Pagination */
+.quiz-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.quiz-pagination button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #90caf9;
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+  color: #1565c0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quiz-pagination button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #90caf9;
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+  color: #1565c0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-pagination button:hover {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: #ffffff;
+}
+
+.quiz-pagination button.active-page {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #ffffff;
+  border-color: #1565c0;
+}
+
+.quiz-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-arrow {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  color: #1565c0;
+}
+
+.sidebar {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+/* Responsive Styles*/
+@media (min-width: 1200px) {
+  .quiz-card {
+    width: calc((100% - 4 * 20px) / 5); /* 5 cards per row */
+  }
+  .quiz-number {
+    font-size: 70px; /* Adjust the font size for better fitting */
+  }
+}
+
+/* Medium screens (Tablets and small laptops) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .quiz-container {
+    padding: 50px 20px;
+  }
+
+  .quiz-card {
+    width: calc((100% - 3 * 20px) / 4); /* 4 cards per row */
+    height: 180px;
+  }
+
+  .quiz-number {
+    font-size: 70px; /* Adjust the font size for better fitting */
+  }
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 767px) {
+  .quiz-container {
+    padding: 50px 20px;
+  }
+
+  .quiz-card {
+    width: calc((100% - 2 * 20px) / 3); /* 3 cards per row */
+    height: 160px;
+  }
+
+  .quiz-number {
+    font-size: 40px; /* Adjust the font size */
+  }
+
+  .quiz-pagination button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .pagination-arrow {
+    font-size: 14px;
+  }
+
+  /* Sidebar for smaller screens */
+  .sidebar {
+    width: 0; /* Hide sidebar by default */
+  }
+
+  .sidebar.open {
+    width: 200px; /* Set appropriate sidebar width for mobile */
+  }
+}
+
+/* Extra small screens (Very small devices like older phones) */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 30px 10px;
+  }
+
+  .quiz-card {
+    width: calc((100% - 1 * 20px) / 2); /* 2 cards per row */
+    height: 140px;
+  }
+
+  .quiz-number {
+    font-size: 20px; 
+  }
+
+  .quiz-pagination button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .pagination-arrow {
+    font-size: 12px;
+  }
+}

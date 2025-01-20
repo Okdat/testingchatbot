@@ -1,0 +1,71 @@
+/* SubjectMainPage.css */
+
+.SubjectPage{
+    display: flex;
+    height: 100vh; 
+    width: 100%;
+  }
+  
+  .SubjectPage-container {
+    
+    flex-grow: 1; 
+    margin-top: 60px;
+    transition: margin-left 0.3s ease; 
+    background-color: #e6f1f8;
+  }
+ 
+  .SubjectPage-header {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .SubjectPage-header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .SubjectPage-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .SubjectPage-content-header {
+    margin-bottom: 20px;
+  }
+  
+  .SubjectPage-content-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .SubjectPage-content-body {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .SubjectPage-content-body-theory,
+  .SubjectPage-content-body-exercise {
+    flex: 1; /* Each section takes up equal width */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .SubjectPage-content-body-theory h3,
+  .SubjectPage-content-body-exercise h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .SubjectPage-content-body-theory p,
+  .SubjectPage-content-body-exercise p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+  }

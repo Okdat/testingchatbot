@@ -1,0 +1,109 @@
+.teacher-subject-main{
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+
+.contentContainer{
+  margin-right: auto;
+  margin-left: auto;
+}
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
+  max-height: 91.5vh; 
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-top: 60px;
+}
+
+.subjectCard {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(90deg, #1e88e5, #1565c0);
+  border-radius: 22.5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.subjectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  line-height: 1.4;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: left;
+  padding: 5px 0;
+}
+
+.dropdownMenu button {
+  background: none;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdownMenu button:hover {
+  background-color: #f5f5f5;
+}
+
+.moreCardImageButton {
+  transform: translateX(-50%); /* Adjust for natural width offset */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+.moreCardImageButton:hover {
+  opacity: 0.8; /* Optional: Add hover effect */
+}
+
+.addCardButton{
+      margin-top: 10px;
+      width: 250px;
+      height: 250px;
+      border: #000 2px solid #eaeaea;
+      border-radius: 22.5px;
+      padding: 15px;
+      cursor: pointer;
+}
+.addCardButton:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,157 @@
+/* General Container */
+.test-creation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+/* Test Creation Content */
+.test-creation-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+  width: 30%;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subject-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.subject-select:focus {
+  border-color: #0072ff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 114, 255, 0.5);
+}
+
+.option-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.option-card.active {
+    background: linear-gradient(90deg, #1e88e5, #1565c0);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.option-card p {
+  font-size: 0.9rem;
+  color: #dfd4d4;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.manual-icon {
+  color: #0072ff;
+}
+
+.random-icon {
+  color: #ff758c;
+}
+
+/* Right Panel */
+.right-panel {
+  width: 70%;
+  background: #f0f8ff;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #ddd;
+}
+
+.placeholder {
+  text-align: center;
+  color: #777;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.placeholder p {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Buttons Styling */
+.subject-select {
+  margin-bottom: 20px;
+}
+
+
+
+.cancel-button {
+  background: red;
+  background-color: #ff0015; 
+  color: #ffffff; 
+  border: 1px solid #f5c2c7; 
+}
+
+.cancel-button:hover {
+  background-color: #f5c2c7; 
+  color: #6a1b20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .test-creation-content {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+}

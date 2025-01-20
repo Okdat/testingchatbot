@@ -1,0 +1,35 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+  height: 60px; 
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-toggle,
+.history-toggle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo-center {
+  position: absolute;
+  left: 5%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}

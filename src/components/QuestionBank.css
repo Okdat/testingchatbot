@@ -1,0 +1,221 @@
+/* Container Styling */
+.question-bank-page{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+.question-bank-content{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto
+}
+.question-bank-container {
+  width: 100%;
+  max-width: 1000px;
+  
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+  overflow-y: auto;
+  margin-top: 70px;
+  height: auto;
+  max-height: calc(100vh - 150px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.question-bank-container::-webkit-scrollbar{
+  display: none;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1565c0;
+}
+
+/* Create Button */
+.create-btn {
+  background: linear-gradient(90deg, #1e88e5, #1565c0);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-btn:hover {
+  background: linear-gradient(90deg, #1565c0, #0d47a1);
+  transform: scale(1.05);
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.filter-dropdown {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #90caf9;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #f3f8fc);
+  color: #1565c0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-dropdown:focus {
+  border-color: #42a5f5;
+  outline: none;
+  box-shadow: 0 0 6px rgba(66, 165, 245, 0.5);
+}
+
+/* Table Styling */
+.table-container {
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: #1565c0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 15px;
+  text-align: center;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.no-data {
+  color: #777;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.action-btn.edit-btn {
+  color: #4caf50;
+}
+
+.action-btn.delete-btn {
+  color: #f44336;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #d1d1d1;
+  border-radius: 4px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #90caf9;
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+  color: #1565c0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button:hover {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5); 
+  color: #ffffff;
+}
+
+.pagination button.active-page {
+  background: linear-gradient(135deg, #1e88e5, #1565c0); 
+  color: #ffffff;
+  border-color: #1565c0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .create-btn {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+
+  thead th,
+  tbody td {
+    font-size: 0.95rem;
+  }
+}

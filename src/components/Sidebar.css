@@ -1,0 +1,95 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #e6f1f8;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-right: 1px solid #c1c1c1;
+}
+
+
+
+.sidebar-header {
+  text-align: center;
+  padding: 10px;
+}
+
+.usthlogo {
+  width: 100px;
+}
+
+.sidebar-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #f0f0f0;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.sidebar-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.sidebar-logout:hover {
+  background-color: #f4b4b4;
+
+}
+
+.sidebar-submenu {
+  padding-left: 40px; 
+  
+}
+
+.sidebar-subitem {
+  padding: 10px;
+  cursor: pointer;
+  border-left: 1px solid black;
+
+}
+
+.sidebar-subitem:hover {
+  background-color: #f0f0f0;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.sidebar-item.active {
+  background-color: #e0e8f8; /* Active color */
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}

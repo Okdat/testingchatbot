@@ -1,0 +1,60 @@
+.sidebar-container {
+    width: 330px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex: 1s;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sidebar-header{
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .divider {
+    background-color: #2c2c2c;
+  }
+  
+  .usthlogo {
+    width: auto;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .logout-section {
+    margin-top: auto;
+  }
+  /* Add Button */
+.add-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: fit-content;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-button-container:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .add-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .new-element-list{
+    margin:auto
+  }
+  .map{
+    margin: auto;
+  }

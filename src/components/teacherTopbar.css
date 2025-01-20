@@ -1,0 +1,39 @@
+.teacher-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+  border-bottom: 1px solid #ddd; /* Add border for better visual separation */
+}
+
+.teacher-logo-center {
+  position: absolute;
+  left: 5%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teacher-menu-toggle {
+  position: absolute;
+  left: 15px; /* Align the menu icon to the right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.teacher-logo {
+  height: 50px;
+  width: auto;
+}

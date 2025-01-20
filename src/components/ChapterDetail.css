@@ -1,0 +1,243 @@
+/* Main Container */
+.chapterdetail-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.chapterDetail-teacher-container{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  overflow-y: auto;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.teacher-chapterDetail-container {
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  padding: 20px;
+  color: #333;
+}
+
+.chapterDetail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  color: #333;
+}
+
+/* Title */
+.chapterDetail-title {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Editor and Media Container */
+.chapterDetail-editorContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Theory Content (Left Side) */
+.chapterDetail-content {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px; 
+  border: 1px solid #90caf9; 
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow-x: auto;
+  margin-bottom: 20px; 
+}
+
+/* Media Container (Right Side) */
+.chapterDetail-mediaContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px; 
+  border: 1px solid #90caf9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; 
+}
+
+/* Video */
+.chapterDetail-iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* Image */
+.chapterDetail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Download Button */
+.download-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #1e88e5, #1565c0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background: linear-gradient(90deg, #1565c0, #0d47a1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Section */
+.quiz-section {
+  position: relative;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+.quiz-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option-label:hover {
+  background-color: #e0e0e0;
+}
+
+.correct-message {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  background-color: #d4edda;
+  border-radius: 2px;
+}
+
+.incorrect-message {
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  background-color: #f8d7da;
+  border-radius: 2px;
+}
+
+/* Radio Button Styling */
+.options input[type="radio"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50%; 
+  outline: none;
+  transition: 0.2s;
+}
+
+.options input[type="radio"]:checked {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  background-color: #003d75;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chapterDetail-editorContainer {
+    flex-direction: column;
+  }
+
+  .chapterDetail-content,
+  .chapterDetail-mediaContainer {
+    width: 100%;
+  }
+
+  .quiz-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .option-label {
+    padding: 12px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

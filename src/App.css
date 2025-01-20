@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flexbox;
+  flex:1;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6f1f8;
+  color: #d1d5db;
+  margin: 0px;
+  
+ 
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100hv
+}
+
+.divider {
+  height: 1px;
+  background-color: #c1c1c1;
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+
+

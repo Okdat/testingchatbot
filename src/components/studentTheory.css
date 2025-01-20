@@ -1,0 +1,46 @@
+/* Main Container */
+.student-theory {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* TopBar remains fixed at the top */
+.top-bar {
+  flex-shrink: 0;
+}
+
+/* Main Content Area */
+.student-dashboard-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar.open {
+  width: 250px; /* Width when open */
+}
+
+/* Main Content (StudentSubjectCard Container) */
+.student-card-container {
+  flex: 1;
+  margin-top: 20px;
+  overflow-y: auto;
+  background-color: #e6f1f8;
+  transition: margin-left 0.3s ease-in-out;
+  padding: 20px;
+}
+
+

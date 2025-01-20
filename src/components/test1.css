@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F1F8;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%; 
+    max-width: 1500px; 
+    height: 80vh; 
+    box-sizing: border-box;
+}
+
+/* Test selection section */
+.test-selection {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.test-selection h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.test-selection button {
+    justify-content:center;
+    width:40px;
+    height: 40px;
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.finish button{
+    margin: 5px;
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.test-selection button:hover {
+    background-color: #ddd;
+}
+
+.test-selection button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00796b;
+}
+
+/* Question section */
+.question-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.question-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    
+}
+
+.question-section label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border: 2px solid #000;
+    padding: 15px;
+}
+
+.question-section input[type="radio"] {
+    margin-right: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #004d40;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .test-selection,
+    .question-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .button-container button {
+        width: 45%;
+        margin: 5px;
+    }
+}

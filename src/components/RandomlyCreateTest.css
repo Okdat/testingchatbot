@@ -1,0 +1,259 @@
+/* General Container */
+.create-test-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #2d3748;
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  gap: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.create-test-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  margin: 0 auto;
+  padding: 10px 5px;
+}
+
+/* Test Info Section */
+.test-info {
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 15px;
+  width: 98%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.test-info p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #374151;
+  word-wrap: break-word;
+}
+
+/* Question List */
+.questions-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.questions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.questions-list::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 3px;
+}
+
+.questions-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+/* Question Item */
+.question-item {
+  background: #ffffff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choice-item {
+  font-size: 0.9rem;
+  margin: 8px 0;
+  color: #374151;
+}
+
+.correct-choice {
+  font-weight: bold;
+  color: #059669;
+}
+
+.correct-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-left: 6px;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.submit-test-button,
+.cancel-test-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 150px;
+  margin-bottom: 100px;
+}
+
+.submit-test-button {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  color: white;
+}
+
+.submit-test-button:hover {
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-test-button {
+  background: linear-gradient(90deg, #f44336, #e57373);
+  color: white;
+}
+
+.cancel-test-button:hover {
+  background: linear-gradient(90deg, #d32f2f, #f6685e);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* No Questions Message */
+.no-questions {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f44336, #e57373); /* Red gradient */
+  color: white;
+  margin-top: 20px;
+  border-radius: 30px; 
+  margin-left: 250px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-questions button {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #f44336, #e57373);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.no-questions-container p {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.no-questions button:hover {
+  background: linear-gradient(90deg, #d32f2f, #f6685e);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-test-title {
+    font-size: 1.8rem;
+    padding: 8px;
+  }
+
+  .test-info {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .questions-list {
+    max-height: 250px;
+  }
+
+  .question-item {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .submit-test-button,
+  .cancel-test-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .no-questions {
+    font-size: 1rem;
+  }
+
+  .no-questions button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-test-container {
+    padding: 5px;
+  }
+
+  .create-test-title {
+    font-size: 1.5rem;
+  }
+
+  .questions-list {
+    max-height: 200px;
+  }
+
+  .question-item {
+    padding: 8px;
+  }
+
+  .submit-test-button,
+  .cancel-test-button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .no-questions {
+    font-size: 0.9rem;
+  }
+
+  .no-questions button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}

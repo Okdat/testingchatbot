@@ -1,0 +1,51 @@
+/* History Sidebar */
+.history {
+  display: flex;
+  flex-direction: column;
+  width: 0; 
+  height: 100vh;
+  background-color: white;
+  overflow-y: auto;
+  padding-top: 60px;
+  transition: width 0.3s ease-in-out;
+  z-index: 999;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.history.open {
+  width: 300px;
+}
+
+/* Header */
+.history-header {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: center;
+}
+
+/* Chat List */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Chat Item */
+.chat {
+  padding: 10px 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #e2eff8;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333333;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.chat:hover {
+  background-color: #cde4f3;
+  transform: translateY(-2px);
+}

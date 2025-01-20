@@ -1,0 +1,170 @@
+
+.test-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-family: Arial, sans-serif;
+}
+.student-test-content{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  direction: column;
+}
+
+/* Sidebar for question navigation */
+.test-sidebar {
+  width: 30%;
+  height: fit-content;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.test-sidebar h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.navigation-buttons button {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  background: #fff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navigation-buttons button.active,
+.navigation-buttons button:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.test-sidebar .finish {
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.test-sidebar .finish:hover {
+  background: #218838;
+}
+
+/* Main question section */
+.question-section {
+  width: 65%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.question-section h4 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.question-section h2 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option-label {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+  
+}
+
+.option-label input {
+  margin-right: 10px;
+  width: 13px;
+  height: 13px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background: #0056b3;
+}
+
+.button-container button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.test-score{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.sidebar {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar.open {
+  width: 250px; /* Width when open */
+}

@@ -1,0 +1,76 @@
+/* Main Dashboard Container */
+.student-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Row Flex Container */
+.row-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Container */
+.sidebar-container {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.sidebar-container.open {
+  width: 250px; /* Adjust as needed */
+}
+
+/* Chat Area Container */
+.chat-area-container {
+  flex: 1;
+  overflow-y: auto;
+  transition: margin 0.3s ease-in-out;
+}
+
+/* Adjust Chat Area when Sidebar is Open */
+.row-container .sidebar-container.open ~ .chat-area-container {
+  margin-left: 250px; /* Push content when Sidebar opens */
+}
+
+/* History Container */
+.history-container {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.history-container.open {
+  width: 300px; 
+}
+
+/* Adjust Chat Area when History is Open */
+.row-container .history-container.open ~ .chat-area-container {
+  margin-right: 300px; /* Push content when History opens */
+}
+
+/* Combined State: Sidebar and History Both Open */
+.row-container .sidebar-container.open ~ .history-container.open ~ .chat-area-container {
+  margin-left: 250px;
+  margin-right: 300px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .sidebar-container.open,
+  .history-container.open {
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    background: white;
+  }
+
+  .chat-area-container {
+    margin: 0 !important; /* Remove margin adjustments on mobile */
+  }
+}
